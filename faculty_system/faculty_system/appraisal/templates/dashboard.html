@@ -1,0 +1,10 @@
+<h1>Dashboard</h1>
+<a href="{% url 'add_appraisal' %}">Add Appraisal</a> | <a href="{% url 'logout' %}">Logout</a>
+<h2>Your Appraisals:</h2>
+<ul>
+    {% for app in data %}
+        <li>{{ app.year }} - Score: {{ app.performance_score }} - Remarks: {{ app.remarks }}</li>
+    {% empty %}
+        <li>No appraisals yet.</li>
+    {% endfor %}
+</ul>

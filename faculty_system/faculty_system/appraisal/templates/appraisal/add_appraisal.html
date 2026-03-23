@@ -1,0 +1,9 @@
+<h1>Add Appraisal</h1>
+<form method="POST">
+    {% csrf_token %}
+    Year: <input type="number" name="year"><br>
+    Performance Score: <input type="text" name="performance_score"><br>
+    Remarks: <textarea name="remarks"></textarea><br>
+    <button type="submit">Add</button>
+</form>
+<a href="{% url 'dashboard' %}">Back to Dashboard</a>
